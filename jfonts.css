@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap');
+    body {
+
+      width: 100%;
+      height: 90vh;
+      font-family: 'Baloo Tamma 2', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      background-image: linear-gradient(to bottom ,#545454 , white 55%) ;
+    }
+    .wave {
+      position: relative;
+      -webkit-box-reflect: below -7.3rem linear-gradient(transparent  ,rgb(5,71,87,0.5) );
+    }
+    .wave span {
+      position: relative;
+      display:inline-block;
+      color: rgb(5,71,87);
+      animation: myJump 1.3s infinite ease-in-out; 
+      animation-delay: calc(.1s * var(--a)); 
+      -webkit-text-stroke: 2px ;
+      -webkit-text-stroke-color: #60dfff;
+    } 
+@keyframes myJump {
+      0% {
+        transform: translateY(0px);
+      }
+      20% { 
+        transform: translateY(-100px);
+      }
+      40%,100% {
+        transform: translateY(0px);
+      }
+    } 
+    @media only screen and (max-width : 600px) {
+      .wave span{
+        font-size: 20px;
+        -webkit-text-stroke: 1px ;
+        -webkit-text-stroke-color: #60dfff;
+      }  
+      .wave{
+      -webkit-box-reflect: below -6.3rem linear-gradient(transparent  ,rgb(5,71,87,0.5) );
+        
+      } 
+    }
+    
+    
+    @media only screen and (min-width : 600px){
+      .wave span{
+        font-size: 40px;
+        -webkit-text-stroke: 1px ;
+        -webkit-text-stroke-color: #60dfff;
+      }
+      .wave{
+      -webkit-box-reflect: below -6.3rem linear-gradient(transparent  ,rgb(5,71,87,0.5) );
+        
+      }
+       
+      
+    }
+    
+    
